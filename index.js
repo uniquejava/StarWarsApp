@@ -1,4 +1,15 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import { StackNavigator } from 'react-navigation';
+import StarWars from './StarWars';
+import People from './People';
 
-AppRegistry.registerComponent('StarWarsApp', () => App);
+const Navigation = StackNavigator({
+  StarWars: {
+    screen: StarWars
+  },
+  People: {
+    screen: People
+  }
+});
+
+AppRegistry.registerComponent('StarWarsApp', () => Navigation);
